@@ -4,13 +4,12 @@ public class CustomClassLoader extends ClassLoader{
 
     public CustomClassLoader(ClassLoader classLoader) {
         super(classLoader);
-
+        System.out.println("ClassLoader :" + classLoader);
     }
 
     @Override
     public Class<?> loadClass(String name) throws ClassNotFoundException {
-        System.out.println("Loading class :" + name);
-
+//        System.out.println("Loading class :" + name);
         return super.loadClass(name);
     }
 }

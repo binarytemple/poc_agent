@@ -13,7 +13,7 @@ public class FooMain {
     public static void main(String[] args) throws InterruptedException {
 
 
-        IntStream.range(0, 10).forEach(x ->
+        IntStream.range(0, 3).forEach(x ->
                 loadClass()
         );
 
@@ -27,6 +27,10 @@ public class FooMain {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        new FooMain();
+        new FooMain().hello();
+    }
+
+    private void hello() {
+        System.out.println("hello");
     }
 }
